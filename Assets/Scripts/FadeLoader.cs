@@ -8,12 +8,9 @@ public class FadeLoader : MonoBehaviour
 
     [SerializeField] Image fadeImg;
 
-    //public UnityEvent onFadeFinish;
-    bool onFadeComplete;
-/*    public bool OnFadeComplete { get { return onFadeComplete; } }*/
-
-    public UnityEvent onStart;
-    public UnityEvent OnFadeComplete;
+    public UnityEvent OnFadeStart;
+    public UnityEvent onFadeInComplete;
+    public UnityEvent onFadeOutComplete;
 
     void Awake()
     {
@@ -22,27 +19,19 @@ public class FadeLoader : MonoBehaviour
         fadeImg.color = t;
     }
 
-    void Start()
-    {
-        onStart.Invoke();
-    }
-
     public void Wait(float dur)
     {
-        //FadeCoroutine = StartCoroutine(IeFadeOut(dur));
         StartCoroutine(IeWait(dur));
     }
 
     public void FadeIn(float dur)
     {
-        //FadeCoroutine = StartCoroutine(IeFadeIn(dur));
         fadeImg.gameObject.SetActive(true);
         StartCoroutine(FadeImage(false, dur));
     }
 
     public void FadeOut(float dur)
     {
-        //FadeCoroutine = StartCoroutine(IeFadeOut(dur));
         fadeImg.gameObject.SetActive(true);
         StartCoroutine(FadeImage(true, dur));
     }
@@ -54,28 +43,24 @@ public class FadeLoader : MonoBehaviour
 
     IEnumerator FadeImage(bool fadeOut, float duration)
     {
+        OnFadeStart.Invoke();
         if (fadeOut)
         {
             for (float i = 1; i >= 0; i -= Time.deltaTime / duration)
             {
                 fadeImg.color = new Color(0, 0, 0, i);
                 yield return null;
-                onFadeComplete = false;
             }
-
-            OnFadeComplete.Invoke();
-            onFadeComplete = true;
+            onFadeOutComplete.Invoke();
         }
         else
         {
             for (float i = 0; i <= 1; i += Time.deltaTime / duration)
             {
                 fadeImg.color = new Color(0, 0, 0, i);
-                onFadeComplete = false;
                 yield return null;
             }
-            OnFadeComplete.Invoke();
-            onFadeComplete = true;
+            onFadeInComplete.Invoke();
         }
     }
 }

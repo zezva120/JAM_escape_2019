@@ -1,12 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+
 
 public class SceneMaster : MonoBehaviour
 {
     [SerializeField]
-    FadeLoader fader;
+    UnityStringEvent onSceneLoaded;
+
+    [SerializeField]
+    UnityStringEvent onSceneUnloaded;
+
+    [SerializeField]
+    UnityStringEvent beforeSceneUnloaded;
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("OnSceneLoaded: " + scene.name + " Mode: " + mode);
+        onSceneLoaded.Invoke(scene.name);
+    }
+
+    void OnSceneUnloaded(Scene scene)
+    {
+        Debug.Log("OnSceneUnloaded: " + scene.name);
+        onSceneUnloaded.Invoke(scene.name);
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
     public void LoadScene(string sceneName)
     {
@@ -20,8 +51,8 @@ public class SceneMaster : MonoBehaviour
 
     IEnumerator IeWaitBeforeLoad(string sceneName)
     {
-        fader.FadeIn(3);
-        yield return new WaitForSeconds(4);
-        LoadScene(sceneName);
+        beforeSceneUnloaded.Invoke(sceneName);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(sceneName);
     }
 }
