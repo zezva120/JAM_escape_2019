@@ -49,3 +49,19 @@ position: 634,-79
 "Oh non!! La nuit arrive.... Vite! Vite!" #line:0504dce
 "Viteeeuuuhh!!" #line:02b3ce1
 ===
+
+title: Dialog3
+tags: 
+colorID: 0
+position: 634,-79
+---
+"Cette forêt est beaucoup trop étrange...."
+===
+
+title: Fin
+tags: 
+colorID: 0
+position: 634,-79
+---
+Merci d'avoir joué et fini le niveau. Ce jeu est encore en développement.
+===
