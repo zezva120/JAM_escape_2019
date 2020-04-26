@@ -16090,6 +16090,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5935829475398715329, guid: 4ec3df5875e7347beb6176b545b8fb39,
         type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935829475398715329, guid: 4ec3df5875e7347beb6176b545b8fb39,
+        type: 3}
       propertyPath: yarnScripts.Array.data[0]
       value: 
       objectReference: {fileID: 2480198943629176163, guid: 2425e73ff9f50ac49a8646c4b6c2374c,
@@ -16133,6 +16138,37 @@ PrefabInstance:
         type: 3}
       propertyPath: onNodeComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935829475398715329, guid: 4ec3df5875e7347beb6176b545b8fb39,
+        type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935829475398715329, guid: 4ec3df5875e7347beb6176b545b8fb39,
+        type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935829475398715329, guid: 4ec3df5875e7347beb6176b545b8fb39,
+        type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 5696638d4edf751419fa76e2e1f91d7f,
+        type: 2}
+    - target: {fileID: 5935829475398715329, guid: 4ec3df5875e7347beb6176b545b8fb39,
+        type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935829475398715329, guid: 4ec3df5875e7347beb6176b545b8fb39,
+        type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935829475398715329, guid: 4ec3df5875e7347beb6176b545b8fb39,
+        type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5935829475398715334, guid: 4ec3df5875e7347beb6176b545b8fb39,
         type: 3}
@@ -24129,7 +24165,7 @@ GameObject:
   - component: {fileID: 1661180738}
   - component: {fileID: 1661180737}
   m_Layer: 0
-  m_Name: BulleDialogue
+  m_Name: DialogueCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24149,6 +24185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePoint: {fileID: 994599216}
   dialogueGO: {fileID: 779456425}
+  lightController: {fileID: 7183986917864706373}
 --- !u!4 &1661180738
 Transform:
   m_ObjectHideFlags: 0
@@ -47203,6 +47240,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7183986917864706339}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7183986917864706373 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7183986919088421543, guid: 79800e4b26a7dd44a8a003583829a5fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7183986917864706339}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7183986917864706351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cc2818504776142aa43fe9a0ef11e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7314420477634353545 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8040398751898040098, guid: 79800e4b26a7dd44a8a003583829a5fa,
