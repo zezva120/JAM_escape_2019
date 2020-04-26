@@ -14,12 +14,15 @@ public class Command : MonoBehaviour
     [SerializeField]
     LightColorController lightController;
 
+    [SerializeField]
+    GameObjectVariable cam;
+
     [YarnCommand("setCharacter")]
     public void SetDialogueBox(string name)
     {
         if (name == "sara")
         {
-            Vector3 pos = Camera.main.WorldToScreenPoint(dialoguePoint.position);
+            Vector3 pos = cam.Value.GetComponent<Camera>().WorldToScreenPoint(dialoguePoint.position);
             dialogueGO.position = pos;
         }
     }

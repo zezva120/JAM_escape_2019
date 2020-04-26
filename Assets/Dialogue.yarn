@@ -26,26 +26,26 @@ tags:
 colorID: 0
 position: 363,-50
 ---
-Appuyer sur Espace pour sauter.
+Appuyer sur Espace pour sauter. #line:0520c97
 ===
 title: Tip1
 tags: 
 colorID: 0
 position: -188,-87
 ---
-Des pièges seront à éviter tout le long du jeu.
-Alors faite bien attention à vous.
+Des pièges seront à éviter tout le long du jeu. #line:0ce9e8d
+Alors faite bien attention à vous. #line:0560eb6
 ===
 title: Dialog2
 tags: 
 colorID: 0
 position: 634,-79
 ---
-"Cette endroit est trop étrange."
-"Elle m'est familier."
-"Oh! Allez foutu mémoire, Rappelle-toi ?!"
+"Cette endroit est trop étrange." #line:0e366c4
+"Elle m'est familier." #line:060140e
+"Oh! Allez foutu mémoire, Rappelle-toi ?!" #line:0eacd7a
 <<wait 2>>
 <<time DialogueCommand fadeIn 20>>
-"Oh non!! La nuit arrive.... Vite! Vite!"
-"Viteeeuuuhh!!"
+"Oh non!! La nuit arrive.... Vite! Vite!" #line:0504dce
+"Viteeeuuuhh!!" #line:02b3ce1
 ===
