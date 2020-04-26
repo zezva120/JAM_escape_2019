@@ -3,7 +3,7 @@ tags:
 colorID: 0
 position: -469,21
 ---
-<<setCharacter BulleDialogue sara>>
+<<setCharacter DialogueCommand sara>>
 "Où suis-je ?" #line:01dca83
 "Qui suis-je ?" #line:004ea2b
 "Je vois une silhouette. Pourquoi je cours en étant horrifié ?" #line:054bcce
@@ -19,9 +19,7 @@ tags:
 colorID: 0
 position: 94,-69
 ---
-<<if visited("Tuto2") is false>>
-    "mmmmmm... Il y a cette boite qui est là. Je me demande à quoi elle peut servir." #line:0376e3c
-<<endif>>
+"mmmmmm... Il y a cette boite qui est là. Je me demande à quoi elle peut servir." #line:0376e3c
 ===
 title: Tuto3
 tags: 
@@ -46,4 +44,8 @@ position: 634,-79
 "Cette endroit est trop étrange."
 "Elle m'est familier."
 "Oh! Allez foutu mémoire, Rappelle-toi ?!"
+<<wait 2>>
+<<time DialogueCommand fadeIn 20>>
+"Oh non!! La nuit arrive.... Vite! Vite!"
+"Viteeeuuuhh!!"
 ===
