@@ -1,0 +1,49 @@
+title: Start
+tags: 
+colorID: 0
+position: -469,21
+---
+<<setCharacter BulleDialogue sara>>
+"Où suis-je ?" #line:01dca83
+"Qui suis-je ?" #line:004ea2b
+"Je vois une silhouette. Pourquoi je cours en étant horrifié ?" #line:054bcce
+"Ah oui, ça me revient." #line:0d726a5
+"J'étais entrain de fuir une personne. Mais qui ?" #line:010dd8e
+"Je me retrouve ici en pleine forêt, perdu au milieu de nulle part." #line:083e2b7
+"Faut vite que je trouve un endroit avant le coucher du soleil." #line:0bf9586
+"Et avant que cette personne me trouve." #line:097825e
+Utilise Z Q S D pour te déplacer. #line:0dee52a
+===
+title: Tuto2
+tags: 
+colorID: 0
+position: 94,-69
+---
+<<if visited("Tuto2") is false>>
+    "mmmmmm... Il y a cette boite qui est là. Je me demande à quoi elle peut servir." #line:0376e3c
+<<endif>>
+===
+title: Tuto3
+tags: 
+colorID: 0
+position: 363,-50
+---
+Appuyer sur Espace pour sauter.
+===
+title: Tip1
+tags: 
+colorID: 0
+position: -188,-87
+---
+Des pièges seront à éviter tout le long du jeu.
+Alors faite bien attention à vous.
+===
+title: Dialog2
+tags: 
+colorID: 0
+position: 634,-79
+---
+"Cette endroit est trop étrange."
+"Elle m'est familier."
+"Oh! Allez foutu mémoire, Rappelle-toi ?!"
+===

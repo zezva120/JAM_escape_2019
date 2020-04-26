@@ -79,7 +79,6 @@ public class CharacterController2D : MonoBehaviour
 
         if (!CanMove || keyboard == null)
             return;
-
         // Horizontal movement
         float moveHorizontal = 0.0f;
 
